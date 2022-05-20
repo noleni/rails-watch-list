@@ -1,10 +1,14 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= 'https://storage.googleapis.com/ff-storage-p01/festivals/cover_photos/000/041/450/original/cover_photo.jpg?1514473357' %>');">
 
 </div>
-<div class="d-flex justify-content-center m-5">
-  <%= image_tag '' %>
+
+
+<div class="cards">
   <% @lists.each do |list|%>
-    <h2 class="p-3"><%= link_to list.name, list_path(list), class: "btn btn-ghost" %></h2>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key, height: 300, width: 400, crop: :fill %>')">
+    <%= link_to list.name, list_path(list) %>
+  </div>
+
   <% end %>
 </div>
 <div class="d-flex justify-content-center">
