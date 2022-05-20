@@ -1,4 +1,4 @@
-<div class="banner" style="background-image:  url('<%= 'https://s3-us-west-2.amazonaws.com/prd-rteditorial/wp-content/uploads/2018/03/13153742/RT_300EssentialMovies_700X250.jpg' %>');">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= 'https://storage.googleapis.com/ff-storage-p01/festivals/cover_photos/000/041/450/original/cover_photo.jpg?1514473357' %>');">
 
 </div>
 <div class="d-flex justify-content-center m-5">
@@ -7,6 +7,6 @@
     <h2 class="p-3"><%= link_to list.name, list_path(list), class: "btn btn-ghost" %></h2>
   <% end %>
 </div>
-<div class="d-grid gap-2 col-6 mx-auto">
+<div class="d-flex justify-content-center">
   <p><%= link_to 'Ajoute une nouvelle liste', new_list_path, class:"btn btn-primary"%></p>
 </div>
